@@ -1,3 +1,17 @@
+// for date diplay 
+const dateDisplay = document.getElementById("dateDisplay");
+
+const today = new Date();
+
+const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+};
+
+dateDisplay.textContent = today.toLocaleDateString("en-IN", options);
+//  for adding income expenses balance on main page 
 const form = document.getElementById("transactionForm");
 const totalIncome = document.getElementById("totalIncome");
 const totalExpense = document.getElementById("totalExpenses");
