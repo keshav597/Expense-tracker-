@@ -2,171 +2,193 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
-    <!-- preconnect bcz browser ko pehle hi btna hai to connect  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- for icons -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExpenseTracker</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style2.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            color: #f8fafc;
+            background:url("welcome-bg.png");
+            background-repeat: no-repeat;
+            display: grid;
+            place-items: center;
+            padding: 28px;
+            overflow: hidden;
+            /* jo content ko hide kr deta hai jo box ke bahar hai  */
+        }
+
+        .welcome-wrap {
+            width: min(760px, 100%);
+            position: relative;
+            z-index: 1;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero {
+            width: 100%;
+            padding: 42px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel {
+            background: rgba(10, 14, 30, 0.68);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 28px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(236, 72, 153, 0.08), rgba(56, 189, 248, 0.12));
+            pointer-events: none;
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #dbeafe;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 4.7rem;
+            line-height: 0.96;
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+        .subtitle {
+            position: relative;
+            z-index: 1;
+            max-width: 660px;
+            color: #cbd5e1;
+            font-size: 1.03rem;
+            line-height: 1.75;
+            margin-bottom: 28px;
+        }
+
+        .cta-row {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 16px;
+            font-weight: 700;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            color: white;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            box-shadow: 0 14px 35px rgba(99, 102, 241, 0.28);
+        }
+
+        .mini-stats {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .mini-card {
+            padding: 16px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 18px;
+        }
+
+        .mini-card span {
+            display: block;
+            font-size: 0.78rem;
+            color: #abb3be;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            margin-bottom: 6px;
+        }
+
+        .mini-card strong {
+            font-size: 1.15rem;
+            color: #f8fafc;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="welcome-wrap">
+        <section class="panel hero">
+            <div class="badge-row">
+                <div class="badge"><i class="fas fa-sparkles"></i> Gen Z Dark UI</div>
+                <div class="badge"><i class="fas fa-chart-line"></i> Expense Tracking</div>
+                <div class="badge"><i class="fas fa-bolt"></i> Clean + Modern</div>
+            </div>
 
-    <div class="container">
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <div class="logo">
-                    <i class="fas fa-wallet"></i>
-                    <span>ExpenseFlow</span>
+            <h1>Track money, <br><span class="gradient-text">look rich doing it.</span></h1>
+            <p class="subtitle">
+                ExpenseFlow gives your finance dashboard a sleek dark vibe with glowing cards, clean sections,
+                and a layout that looks portfolio-ready for college demos.
+            </p>
+
+            <div class="cta-row">
+                <a href="dashboard.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Enter Dashboard</a>
+            </div>
+
+            <div class="mini-stats">
+                <div class="mini-card">
+                    <span>UI Mood</span>
+                    <strong>Dark + Glossy</strong>
+                </div>
+                <div class="mini-card">
+                    <span>Style</span>
+                    <strong>Young & Premium</strong>
+                </div>
+                <div class="mini-card">
+                    <span>Use Case</span>
+                    <strong>Portfolio Ready</strong>
                 </div>
             </div>
-            <nav class="sidebar-nav">
-                <ul>
-                    <li class="nav-item active" id="dashboard">
-                        <i class="fas fa-th-large"></i>
-                        <span>Dashboard</span>
-                    </li>
-                    <li class="nav-item" id="transactions">
-                        <i class="fas fa-exchange-alt"></i>
-                        <span>Transactions</span>
-                    </li>
-                    <li class="nav-item" id="savings">
-                         <i class="fa-solid fa-sack-dollar"></i>
-                        <span>Saving</span>
-                    </li>
-                </ul>
-            </nav>
-            <div class="sidebar-footer">
-                <div class="theme" id="theme">
-                    <i class="fas fa-moon"></i> <!-- for moon icon -->
-                    <span>Dark Mode</span>
-                </div>
-            </div>
-        </aside>
-        
-        <main class="main">
-        
-            <!-- dashboard page -->
-
-            <section class="page active" id="dashboardPage">
-                <div class="page-header">
-                    <!-- for date and writting dashboard -->
-                    <h1>Dashboard</h1>
-                    <p class="date-display" id="dateDisplay"></p>
-                </div>
-                <!-- summary cards income balance -->
-                <div class="cards">
-                    <div class="card balance" id="balanceCard">
-                        <div class="card-icon">
-                            <i class="fas fa-wallet"></i>
-                        </div>
-                        <div class="card-info">
-                            <p class="card-label">Total Balance</p>
-                            <h2 class="card-amount" id="totalBalance">₹0.00</h2>
-                        </div>
-                        <div class="card-decoration"></div>
-                    </div>
-                    <div class="card income" id="incomeCard">
-                        <div class="card-icon">
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                        <div class="card-info">
-                            <p class="card-label">Total Income</p>
-                            <h2 class="card-amount" id="totalIncome">₹0.00</h2>
-                        </div>
-                        <div class="card-decoration"></div>
-                    </div>
-                    <div class="card expense" id="expenseCard">
-                        <div class="card-icon">
-                            <i class="fas fa-arrow-up"></i>
-                        </div>
-                        <div class="card-info">
-                            <p class="card-label">Total Expenses</p>
-                            <h2 class="card-amount" id="totalExpenses">₹0.00</h2>
-                        </div>
-                        <div class="card-decoration"></div>
-                    </div>
-                </div>
-
-                <!-- Dashboard Body -->
-                <div class="dashboard">
-                    <!-- Add Transaction Form -->
-                    <div class="form-container glass-card">
-                        <h3><i class="fas fa-plus-circle"></i> Add Transaction</h3>
-                        <form id="transactionForm">
-                            <div class="form-group">
-                                <label for="description">Description</label>
-                                <input type="text" id="description" placeholder="e.g. Grocery shopping" required>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="amount">Amount (₹)</label>
-                                    <input type="number" id="amount" placeholder="0.00" step="0.01" min="0.01" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="type">Type</label>
-                                    <select id="type" required>
-                                        <option value="expense">Expense</option>
-                                        <option value="income">Income</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="category">Category</label>
-                                    <select id="category" required>
-                                        <option value="food">🍔 Food & Dining</option>
-                                        <option value="transport">🚗 Transport</option>
-                                        <option value="shopping">🛍️ Shopping</option>
-                                        <option value="entertainment">🎬 Entertainment</option>
-                                        <option value="bills">📄 Bills & Utilities</option>
-                                        <option value="health">🏥 Health</option>
-                                        <option value="education">📚 Education</option>
-                                        <option value="salary">💰 Salary</option>
-                                        <option value="freelance">💻 Freelance</option>
-                                        <option value="investment">📈 Investment</option>
-                                        <option value="other">📦 Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="date">Date</label>
-                                    <input type="date" id="date" required>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="submitBtn">
-                                <i class="fas fa-plus"></i> Add Transaction
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Recent Transactions -->
-                <div class="recent-transactions glass-card">
-                    <div class="section-header">
-                        <h3><i class="fas fa-clock"></i> Recent Transactions</h3>
-                        <button class="btn btn-outline" id="viewAllBtn">View All</button>
-                    </div>
-                    <ul class="transaction-list" id="recentTransactionList">
-                        <li class="empty-state" id="emptyRecent">
-                            <i class="fas fa-receipt"></i>
-                            <p>No transactions yet. Add your first one above!</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            
-            <!-- transaction page -->
-            
-            <section class="page" id="transactionsPage"></section>
-            
-            <!-- saving Page -->
-            
-            <section class="page" id="savingsPage"></section>
-        
-        </main>
+        </section>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
