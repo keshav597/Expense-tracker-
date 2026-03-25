@@ -6,7 +6,6 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: #f0f4f8;
     color: #1e293b;
     min-height: 100vh;
@@ -17,7 +16,6 @@ body {
     display: flex;
     min-height: 100vh;
 }
-
 .sidebar {
     width: 260px;
     background: #0f172a;
@@ -30,7 +28,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 28px 20px;
-    /* transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .sidebar-header {
@@ -267,12 +264,10 @@ body {
     background: #ffffff;
     color: #1e293b;
     outline: none;
-    /* height: 22px; */
 }
 .form-group input:focus,
 .form-group select:focus {
     border-color: rgba(148,163,184,0.2);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
 .form-row {
@@ -288,11 +283,9 @@ body {
     padding: 12px 22px;
     border: none;
     border-radius: 8px;
-    /* font-family: inherit; */
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    /* transition: all var(--transition); */
 }
 
 .btn-primary {
