@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,86 +9,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* ---------------- TRANSACTIONS PAGE ---------------- */
+        .transactions-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-.transactions-page-card {
-    padding: 24px;
-}
+        .transactions-table th,
+        .transactions-table td {
+            text-align: left;
+            padding: 16px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.95rem;
+        }
 
-/* .transactions-table-wrap {
-    overflow-x: auto;
-} */
+        .transactions-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
 
-.transactions-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: #f8fafc;
-}
+        .type-badge,
+        .status-badge {
+            display: inline-block;
+            padding: 7px 12px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+        }
 
-.transactions-table th,
-.transactions-table td {
-    text-align: left;
-    padding: 16px 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.95rem;
-}
+        .income-badge {
+            background: rgba(16, 185, 129, 0.14);
+            color: #34d399;
+        }
 
-.transactions-table th {
-    color: #cbd5e1;
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 700;
-}
+        .expense-badge {
+            background: rgba(239, 68, 68, 0.14);
+            color: #f87171;
+        }
 
-.transactions-table tbody tr:hover {
-    background: rgba(255,255,255,0.04);
-}
+        .amount-income {
+            color: #34d399;
+            font-weight: 700;
+        }
 
-.type-badge,
-.status-badge {
-    display: inline-block;
-    padding: 7px 12px;
-    border-radius: 999px;
-    font-size: 0.78rem;
-    font-weight: 600;
-}
-
-.income-badge {
-    background: rgba(16, 185, 129, 0.14);
-    color: #34d399;
-}
-
-.expense-badge {
-    background: rgba(239, 68, 68, 0.14);
-    color: #f87171;
-}
-
-.status-badge.done {
-    background: rgba(99, 102, 241, 0.14);
-    color: #a5b4fc;
-}
-
-.status-badge.pending {
-    background: rgba(245, 158, 11, 0.14);
-    color: #fbbf24;
-}
-
-.amount-income {
-    color: #34d399;
-    font-weight: 700;
-}
-
-.amount-expense {
-    color: #f87171;
-    font-weight: 700;
-}
+        .amount-expense {
+            color: #f87171;
+            font-weight: 700;
+        }
     </style>
 </head>
+
 <body>
     <section class="page active" id="transactionsPage">
         <div class="page-header">
             <h1>Transactions</h1>
-            <!-- <p class="date-display">All your recent money activity</p> -->
         </div>
 
         <div class="glass-card transactions-page-card">
@@ -150,4 +122,5 @@
         </div>
     </section>
 </body>
+
 </html>
