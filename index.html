@@ -17,7 +17,6 @@
             color: #f8fafc;
             background:url("welcome-bg.png");
             background-repeat: no-repeat;
-            display: grid;
             place-items: center;
             padding: 28px;
             overflow: hidden;
@@ -25,11 +24,14 @@
         }
 
         .welcome-wrap {
-            width: min(760px, 100%);
+            /* responsive container jo hero section ko center aur properly aligne kr raha hai */
+            width: 100%;
+            max-width: 760px;
             position: relative;
-            z-index: 1;
+            z-index: 10;
             margin: 0 auto;
             display: flex;
+            box-shadow: #6366f1;
             justify-content: center;
             align-items: center;
         }
@@ -39,20 +41,15 @@
             padding: 42px;
             position: relative;
             overflow: hidden;
+            /* jo bahar hoga hide ho jayega  */
         }
 
         .panel {
             background: rgba(10, 14, 30, 0.68);
             border: 1px solid rgba(255, 255, 255, 0.10);
             border-radius: 28px;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(236, 72, 153, 0.08), rgba(56, 189, 248, 0.12));
-            pointer-events: none;
+            box-shadow: 0px 6px 9px rgba(119, 125, 232);
+            margin-top: 40px;
         }
 
         .badge-row {
@@ -72,8 +69,6 @@
             border-radius: 999px;
             background: rgba(255, 255, 255, 0.07);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            color: #dbeafe;
-            font-size: 0.9rem;
             font-weight: 600;
         }
 
@@ -95,7 +90,7 @@
             margin-bottom: 28px;
         }
 
-        .cta-row {
+        .stylebtn {
             position: relative;
             z-index: 1;
             display: flex;
@@ -134,7 +129,7 @@
 
         .mini-card {
             padding: 16px 18px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgb(198 198 198 / 5%);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 18px;
         }
@@ -170,7 +165,7 @@
                 and a layout that looks portfolio-ready for college demos.
             </p>
 
-            <div class="cta-row">
+            <div class="stylebtn">
                 <a href="dashboard.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Enter Dashboard</a>
             </div>
 

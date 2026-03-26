@@ -7,9 +7,9 @@ body {
     color: #f8fafc;
     overflow-x: hidden;
     background-image: url("welcome-bg.png");
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -113,7 +113,6 @@ background-repeat: no-repeat;
 
 .page { 
     display: none; 
-    animation: fadeIn 0.4s ease; 
 }
 .page.active { 
     display: block; 
@@ -210,26 +209,6 @@ background-repeat: no-repeat;
 .card-amount {
     font-size: 1.55rem;
     font-weight: 700;
-}
-.card-decoration {
-    position: absolute;
-    top: -31px;
-    right: -31px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-}
-
-.card-decoration::after {
-    content: '';
-    position: absolute;
-    bottom: -19px;
-    left: -19px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.06);
 }
 .dashboard {
     display: grid;
@@ -405,3 +384,6 @@ background-repeat: no-repeat;
 
 .empty-state i { font-size: 2.5rem; margin-bottom: 12px; display: block; }
 .empty-state p { font-size: 0.92rem; }
+.sidebar ul li a {
+    text-decoration: none;
+}

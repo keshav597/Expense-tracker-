@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ---------------- TRANSACTIONS PAGE ---------------- */
+
+.transactions-page-card {
+    padding: 24px;
+}
+
+/* .transactions-table-wrap {
+    overflow-x: auto;
+} */
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #f8fafc;
+}
+
+.transactions-table th,
+.transactions-table td {
+    text-align: left;
+    padding: 16px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.95rem;
+}
+
+.transactions-table th {
+    color: #cbd5e1;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+}
+
+.transactions-table tbody tr:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.type-badge,
+.status-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.income-badge {
+    background: rgba(16, 185, 129, 0.14);
+    color: #34d399;
+}
+
+.expense-badge {
+    background: rgba(239, 68, 68, 0.14);
+    color: #f87171;
+}
+
+.status-badge.done {
+    background: rgba(99, 102, 241, 0.14);
+    color: #a5b4fc;
+}
+
+.status-badge.pending {
+    background: rgba(245, 158, 11, 0.14);
+    color: #fbbf24;
+}
+
+.amount-income {
+    color: #34d399;
+    font-weight: 700;
+}
+
+.amount-expense {
+    color: #f87171;
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+    <section class="page active" id="transactionsPage">
+        <div class="page-header">
+            <h1>Transactions</h1>
+            <!-- <p class="date-display">All your recent money activity</p> -->
+        </div>
+
+        <div class="glass-card transactions-page-card">
+            <div class="section-header">
+                <h3><i class="fas fa-exchange-alt"></i> Transaction History</h3>
+                <button class="btn btn-outline">Filter</button>
+            </div>
+
+            <div class="transactions-table-wrap">
+                <table class="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Grocery Shopping</td>
+                            <td>🍔 Food</td>
+                            <td><span class="type-badge expense-badge">Expense</span></td>
+                            <td>25 Mar 2026</td>
+                            <td class="amount-expense">- ₹850</td>
+                        </tr>
+                        <tr>
+                            <td>Freelance Payment</td>
+                            <td>💻 Freelance</td>
+                            <td><span class="type-badge income-badge">Income</span></td>
+                            <td>24 Mar 2026</td>
+                            <td class="amount-income">+ ₹5,000</td>
+                        </tr>
+                        <tr>
+                            <td>Movie Night</td>
+                            <td>🎬 Entertainment</td>
+                            <td><span class="type-badge expense-badge">Expense</span></td>
+                            <td>22 Mar 2026</td>
+                            <td class="amount-expense">- ₹420</td>
+
+                        </tr>
+                        <tr>
+                            <td>Bus Pass</td>
+                            <td>🚗 Transport</td>
+                            <td><span class="type-badge expense-badge">Expense</span></td>
+                            <td>20 Mar 2026</td>
+                            <td class="amount-expense">- ₹600</td>
+                        </tr>
+                        <tr>
+                            <td>Monthly Allowance</td>
+                            <td>💰 Salary</td>
+                            <td><span class="type-badge income-badge">Income</span></td>
+                            <td>18 Mar 2026</td>
+                            <td class="amount-income">+ ₹8,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
