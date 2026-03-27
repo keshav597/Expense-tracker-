@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,15 +17,15 @@
     <div class="container">
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <div class="logo">
+                <a href="index.html" style="text-decoration: none;" class="logo">
                     <i class="fas fa-wallet"></i>
-                    <span>ExpenseFlow</span>
-                </div>
+                    <span>ExpenseTracker</span>
+                </a>
             </div>
             <nav class="sidebar-nav">
  <ul>
     <li>
-        <a href="index.html" class="nav-item active">
+        <a href="dashboard.html" class="nav-item active">
             <i class="fas fa-th-large"></i>
             <span>Dashboard</span>
         </a>
@@ -58,10 +58,15 @@
 
             <section class="page active" id="dashboardPage">
                 <div class="page-header">
-                    <!-- for date and writting dashboard -->
-                    <h1>Dashboard</h1>
-                    <p class="date-display" id="dateDisplay"></p>
-                </div>
+    <div>
+        <h1>Dashboard</h1>
+        <p class="date-display" id="dateDisplay"></p>
+    </div>
+
+    <a href="login.html" class="login-btn">
+        <i class="fas fa-user"></i> Login
+    </a>
+</div> 
                 <!-- summary cards income balance -->
                 <div class="cards">
                     <div class="card balance" id="balanceCard">
@@ -152,8 +157,7 @@
                 <div class="recent-transactions glass-card">
                     <div class="section-header">
                         <h3><i class="fas fa-clock"></i> Recent Transactions</h3>
-                        <button class="btn btn-outline" id="viewAllBtn">View All</button>
-                    </div>
+                    <a href="transaction.html" style="text-decoration: none;" class="btn btn-outline">View All</a>                    </div>
                     <ul class="transaction-list" id="recentTransactionList">
                         <li class="empty-state" id="emptyRecent">
                             <i class="fas fa-receipt"></i>

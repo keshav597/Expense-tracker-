@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ExpenseFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url("welcome-bg.png") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .login-box h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .login-box p {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .bottom-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .bottom-links a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h1><i class="fas fa-user-circle"></i> Login</h1>
+        <p>Enter your details to continue</p>
+
+        <form action="dashboard.html">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div class="bottom-links">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <a href="dashboard.html">Skip Login</a>
+        </div>
+    </div>
+
+</body>
+</html> 

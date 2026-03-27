@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transactions</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Transactions - ExpenseFlow</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        /* ---------------- TRANSACTIONS PAGE ---------------- */
+        .transactions-page-card {
+            padding: 24px;
+        }
+
+        .transactions-table-wrap {
+            overflow-x: auto;
+        }
+
         .transactions-table {
             width: 100%;
             border-collapse: collapse;
+            color: #f8fafc;
         }
 
         .transactions-table th,
@@ -22,12 +30,19 @@
             font-size: 0.95rem;
         }
 
+        .transactions-table th {
+            color: #cbd5e1;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+        }
+
         .transactions-table tbody tr:hover {
             background: rgba(255, 255, 255, 0.04);
         }
 
-        .type-badge,
-        .status-badge {
+        .type-badge {
             display: inline-block;
             padding: 7px 12px;
             border-radius: 999px;
@@ -55,72 +70,120 @@
         }
     </style>
 </head>
-
 <body>
-    <section class="page active" id="transactionsPage">
-        <div class="page-header">
-            <h1>Transactions</h1>
-        </div>
 
-        <div class="glass-card transactions-page-card">
-            <div class="section-header">
-                <h3><i class="fas fa-exchange-alt"></i> Transaction History</h3>
-                <button class="btn btn-outline">Filter</button>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" style="text-decoration: none;" class="logo">
+                    <i class="fas fa-wallet"></i>
+                    <span>ExpenseTracker</span>
+                </a>
             </div>
 
-            <div class="transactions-table-wrap">
-                <table class="transactions-table">
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Category</th>
-                            <th>Type</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Grocery Shopping</td>
-                            <td>🍔 Food</td>
-                            <td><span class="type-badge expense-badge">Expense</span></td>
-                            <td>25 Mar 2026</td>
-                            <td class="amount-expense">- ₹850</td>
-                        </tr>
-                        <tr>
-                            <td>Freelance Payment</td>
-                            <td>💻 Freelance</td>
-                            <td><span class="type-badge income-badge">Income</span></td>
-                            <td>24 Mar 2026</td>
-                            <td class="amount-income">+ ₹5,000</td>
-                        </tr>
-                        <tr>
-                            <td>Movie Night</td>
-                            <td>🎬 Entertainment</td>
-                            <td><span class="type-badge expense-badge">Expense</span></td>
-                            <td>22 Mar 2026</td>
-                            <td class="amount-expense">- ₹420</td>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html" class="nav-item">
+                            <i class="fas fa-th-large"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transaction.html" class="nav-item active">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="saving.html" class="nav-item">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <span>Saving</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-                        </tr>
-                        <tr>
-                            <td>Bus Pass</td>
-                            <td>🚗 Transport</td>
-                            <td><span class="type-badge expense-badge">Expense</span></td>
-                            <td>20 Mar 2026</td>
-                            <td class="amount-expense">- ₹600</td>
-                        </tr>
-                        <tr>
-                            <td>Monthly Allowance</td>
-                            <td>💰 Salary</td>
-                            <td><span class="type-badge income-badge">Income</span></td>
-                            <td>18 Mar 2026</td>
-                            <td class="amount-income">+ ₹8,000</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="sidebar-footer">
+                <div class="theme">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </div>
             </div>
-        </div>
-    </section>
+        </aside>
+
+        <main class="main">
+            <section class="page active" id="transactionsPage">
+                <div class="page-header">
+                    <div>
+                        <h1>Transactions</h1>
+                        <p class="date-display">Your recent income and expenses</p>
+                    </div>
+                    <a href="dashboard.html" class="login-btn">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </a>
+                </div>
+
+                <div class="glass-card transactions-page-card">
+                    <div class="section-header">
+                        <h3><i class="fas fa-exchange-alt"></i> Transaction History</h3>
+                        <button class="btn btn-outline">Filter</button>
+                    </div>
+
+                    <div class="transactions-table-wrap">
+                        <table class="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Grocery Shopping</td>
+                                    <td>🍔 Food</td>
+                                    <td><span class="type-badge expense-badge">Expense</span></td>
+                                    <td>25 Mar 2026</td>
+                                    <td class="amount-expense">- ₹850</td>
+                                </tr>
+                                <tr>
+                                    <td>Freelance Payment</td>
+                                    <td>💻 Freelance</td>
+                                    <td><span class="type-badge income-badge">Income</span></td>
+                                    <td>24 Mar 2026</td>
+                                    <td class="amount-income">+ ₹5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Movie Night</td>
+                                    <td>🎬 Entertainment</td>
+                                    <td><span class="type-badge expense-badge">Expense</span></td>
+                                    <td>22 Mar 2026</td>
+                                    <td class="amount-expense">- ₹420</td>
+                                </tr>
+                                <tr>
+                                    <td>Bus Pass</td>
+                                    <td>🚗 Transport</td>
+                                    <td><span class="type-badge expense-badge">Expense</span></td>
+                                    <td>20 Mar 2026</td>
+                                    <td class="amount-expense">- ₹600</td>
+                                </tr>
+                                <tr>
+                                    <td>Monthly Allowance</td>
+                                    <td>💰 Salary</td>
+                                    <td><span class="type-badge income-badge">Income</span></td>
+                                    <td>18 Mar 2026</td>
+                                    <td class="amount-income">+ ₹8,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
 </body>
-
 </html>

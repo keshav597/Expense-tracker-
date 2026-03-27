@@ -375,7 +375,7 @@ body {
 .transaction-item:hover .transaction-actions
 { opacity: 1; }
 
-/* ------EMPTY STATE */
+/* empty jaghan ke liye  */
 .empty-state {
     text-align: center;
     padding: 40px 20px;
@@ -386,4 +386,21 @@ body {
 .empty-state p { font-size: 0.92rem; }
 .sidebar ul li a {
     text-decoration: none;
+}
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: #6366f1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #8b5cf6;
+    transform: translateY(-2px);
 }

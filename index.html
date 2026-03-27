@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,23 +14,22 @@
         body {
             min-height: 100vh;
             color: #f8fafc;
-            background:url("welcome-bg.png");
+            background: url("welcome-bg.png");
             background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             place-items: center;
             padding: 28px;
             overflow: hidden;
-            /* jo content ko hide kr deta hai jo box ke bahar hai  */
         }
 
         .welcome-wrap {
-            /* responsive container jo hero section ko center aur properly aligne kr raha hai */
             width: 100%;
             max-width: 760px;
             position: relative;
             z-index: 10;
             margin: 0 auto;
             display: flex;
-            box-shadow: #6366f1;
             justify-content: center;
             align-items: center;
         }
@@ -41,7 +39,6 @@
             padding: 42px;
             position: relative;
             overflow: hidden;
-            /* jo bahar hoga hide ho jayega  */
         }
 
         .panel {
@@ -75,11 +72,12 @@
         h1 {
             position: relative;
             z-index: 1;
-            font-size: 4.7rem;
+            font-size: 4.2rem;
             line-height: 0.96;
             margin-bottom: 18px;
             font-weight: 800;
         }
+
         .subtitle {
             position: relative;
             z-index: 1;
@@ -101,12 +99,15 @@
         }
 
         .btn {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
             gap: 10px;
             text-decoration: none;
             padding: 14px 22px;
             border-radius: 16px;
             font-weight: 700;
+            transition: 0.3s ease;
         }
 
         .btn:hover {
@@ -118,7 +119,6 @@
             background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
             box-shadow: 0 14px 35px rgba(99, 102, 241, 0.28);
         }
-
         .mini-stats {
             position: relative;
             z-index: 1;
@@ -166,7 +166,11 @@
             </p>
 
             <div class="stylebtn">
-                <a href="dashboard.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Enter Dashboard</a>
+
+
+                <a href="login.html" class="btn btn-primary">
+                    <i class="fas fa-user"></i> Login
+                </a>
             </div>
 
             <div class="mini-stats">
