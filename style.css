@@ -108,7 +108,6 @@ body {
     margin-left: 260px;
     padding: 36px 40px;
     min-height: 100vh;
-    background: transparent;
 }
 
 .page { 
@@ -395,7 +394,7 @@ body {
     background: #6366f1;
     color: #fff;
     text-decoration: none;
-    border-radius: 70%;
+    border-radius: 16px;
     font-weight: 600;
     transition: 0.3s ease;
 }

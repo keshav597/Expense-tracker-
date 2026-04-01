@@ -23,26 +23,26 @@
                 </a>
             </div>
             <nav class="sidebar-nav">
- <ul>
-    <li>
-        <a href="dashboard.html" class="nav-item active">
-            <i class="fas fa-th-large"></i>
-            <span>Dashboard</span>
-        </a>
-    </li>
-    <li>
-        <a href="transaction.html" class="nav-item">
-            <i class="fas fa-exchange-alt"></i>
-            <span>Transactions</span>
-        </a>
-    </li>
-    <li>
-        <a href="saving.html" class="nav-item">
-            <i class="fa-solid fa-sack-dollar"></i>
-            <span>Saving</span>
-        </a>
-    </li>
-</ul>
+                <ul>
+                    <li>
+                        <a href="dashboard.html" class="nav-item active">
+                            <i class="fas fa-th-large"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transaction.html" class="nav-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="saving.html" class="nav-item">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <span>Saving</span>
+                        </a>
+                    </li>
+                </ul>
             </nav>
             <div class="sidebar-footer">
                 <div class="theme" id="theme">
@@ -51,24 +51,22 @@
                 </div>
             </div>
         </aside>
-        
-        <main class="main">
-        
-            <!-- dashboard page -->
 
+        <main class="main">
+            <!-- dashboard page -->
             <section class="page active" id="dashboardPage">
                 <div class="page-header">
-    <div>
-        <h1>Dashboard</h1>
-        <p class="date-display" id="dateDisplay"></p>
-    </div>
-
-    <a href="login.html" class="login-btn">
-        <i class="fas fa-user"></i> 
-    </a>
-</div> 
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p class="date-display" id="dateDisplay"></p>
+                    </div>
+                    <a href="login.html" class="login-btn">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
                 <!-- summary cards income balance -->
                 <div class="cards">
+                    <!-- for balance  -->
                     <div class="card balance" id="balanceCard">
                         <div class="card-icon">
                             <i class="fas fa-wallet"></i>
@@ -77,8 +75,8 @@
                             <p class="card-label">Total Balance</p>
                             <h2 class="card-amount" id="totalBalance">₹0.00</h2>
                         </div>
-                        <div class="card-decoration"></div>
                     </div>
+                    <!-- for income  -->
                     <div class="card income" id="incomeCard">
                         <div class="card-icon">
                             <i class="fas fa-arrow-down"></i>
@@ -87,8 +85,8 @@
                             <p class="card-label">Total Income</p>
                             <h2 class="card-amount" id="totalIncome">₹0.00</h2>
                         </div>
-                        <div class="card-decoration"></div>
                     </div>
+                    <!-- for expense  -->
                     <div class="card expense" id="expenseCard">
                         <div class="card-icon">
                             <i class="fas fa-arrow-up"></i>
@@ -97,7 +95,6 @@
                             <p class="card-label">Total Expenses</p>
                             <h2 class="card-amount" id="totalExpenses">₹0.00</h2>
                         </div>
-                        <div class="card-decoration"></div>
                     </div>
                 </div>
 
@@ -157,7 +154,8 @@
                 <div class="recent-transactions glass-card">
                     <div class="section-header">
                         <h3><i class="fas fa-clock"></i> Recent Transactions</h3>
-                    <a href="transaction.html" style="text-decoration: none;" class="btn btn-outline">View All</a>                    </div>
+                        <a href="transaction.html" style="text-decoration: none;" class="btn btn-outline">View All</a>
+                    </div>
                     <ul class="transaction-list" id="recentTransactionList">
                         <li class="empty-state" id="emptyRecent">
                             <i class="fas fa-receipt"></i>
@@ -166,15 +164,15 @@
                     </ul>
                 </div>
             </section>
-            
+
             <!-- transaction page -->
-            
+
             <section class="page" id="transactionsPage"></section>
-            
+
             <!-- saving Page -->
-            
+
             <section class="page" id="savingsPage"></section>
-        
+
         </main>
     </div>
     <script src="script.js"></script>
