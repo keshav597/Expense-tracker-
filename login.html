@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - ExpenseFlow</title>
+    <title>Login - ExpenseTracker</title>
+        <link rel="icon" type="image/png" href="image.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             min-height: 100vh;
-            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #080f22, #09142b, #0b1c36);
             display: flex;
             justify-content: center;
@@ -23,42 +18,16 @@
             padding: 20px;
             color: white;
             position: relative;
-            overflow: hidden;
-        }
-
-        body::before,
-        body::after {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(90px);
-            z-index: 0;
-        }
-
-        body::before {
-            width: 240px;
-            height: 240px;
-            background: rgba(139, 92, 246, 0.22);
-            top: 30px;
-            left: 40px;
-        }
-
-        body::after {
-            width: 260px;
-            height: 260px;
-            background: rgba(59, 130, 246, 0.18);
-            right: 30px;
-            top: 80px;
         }
 
         .login-box {
             width: 100%;
             max-width: 550px;
             background: rgba(7, 15, 35, 0.9);
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 28px;
             padding: 34px 36px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+            box-shadow: 0px 6px 9px rgba(119, 125, 232);
             position: relative;
             z-index: 1;
         }
@@ -73,7 +42,6 @@
             justify-content: center;
             align-items: center;
             font-size: 2rem;
-            box-shadow: 0 12px 30px rgba(109, 93, 252, 0.35);
         }
 
         .login-box h1 {
@@ -109,9 +77,9 @@
             width: 100%;
             padding: 18px 18px;
             border-radius: 18px;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             outline: none;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             color: white;
             font-size: 1rem;
         }
@@ -135,22 +103,6 @@
             gap: 8px;
             font-size: 0.92rem;
             color: #d0dbf5;
-        }
-
-        .checkbox-label input {
-            accent-color: #8b5cf6;
-            width: 16px;
-            height: 16px;
-        }
-
-        .forgot-link {
-            color: #c4b5fd;
-            text-decoration: none;
-            font-size: 0.92rem;
-        }
-
-        .forgot-link:hover {
-            color: white;
         }
 
         .terms-row {
@@ -177,7 +129,7 @@
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-4px);
         }
 
         .bottom-links {
@@ -196,24 +148,11 @@
         .bottom-links a:hover {
             color: white;
         }
-
-        @media (max-width: 600px) {
-            .login-box {
-                padding: 26px 20px;
-            }
-
-            .login-box h1 {
-                font-size: 2rem;
-            }
-
-            .checkbox-row,
-            .bottom-links {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
     </style>
+
+    <link rel="icon" type="image/png" href="image.png">
 </head>
+
 <body>
 
     <div class="login-box">
@@ -221,7 +160,7 @@
             <i class="fas fa-user-circle"></i>
         </div>
 
-        <h1>Welcome Back</h1>
+        <h1>Welcome </h1>
         <p>Login and enter your premium expense dashboard.</p>
 
         <form action="dashboard.html">
@@ -251,13 +190,13 @@
                     Remember me
                 </label>
 
-                <a href="#" class="forgot-link">Forgot Password?</a>
+                <!-- <a href="#" class="forgot-link">Forgot Password?</a> -->
             </div>
 
             <div class="terms-row">
                 <label class="checkbox-label">
                     <input type="checkbox" required>
-                    I agree to the Terms & Conditions
+                    I agree to the <a href="terms.html" style="color: #d0dbf5;">Terms & Conditions</a>
                 </label>
             </div>
 
@@ -273,4 +212,5 @@
     </div>
 
 </body>
+
 </html>
